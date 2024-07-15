@@ -1,1 +1,9 @@
-
+1. Create a website in any language of your choice and push the code into GitHub.
+2. Migrate your GitHub repository into the AWS CodeCommit repository.
+3. Create two CodeDeploy deployments (for the QA stage and the Production stage) with an EC2 deployment group into which you can push the code from the CodeCommit repository.
+4. Using AWS CodePipeline, create a software development life cycle:
+a. The source is the CodeCommit repository
+b. The code will be pushed into the deployment created in CodeDeploy
+c. There should be two stages in deployment, the QA stage and the Production stage
+d. Only when the QA stage is successful, the Production stage should be executed
+5. Create a third stage where the same website is pushed into an Elastic Beanstalk environment.
