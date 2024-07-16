@@ -1,0 +1,26 @@
+Create an code commit repo
+Upload a file from code
+Settings -> notification setup-> sns (to add an notification rules)
+Clone https url or copy the url 
+Go to IAM user -> security credentials-> generate https git credentials.
+go to local install git and run: git clone https-url-copied.
+enter username and password from created iam credentials.
+go to repo cloned in local machine and can see master branch init.
+
+connectivity completed!
+
+copy all the files from code directory to master directory
+
+since new files are added to local git master, do
+git add .
+git commit -m "added file"
+git status
+git push 
+
+Now all the newly added files are pushed to codecommit repository
+-----------------------------------------------------------
+A D V A N C E D
+----------------------------------------
+CODE COMMIT - MONITORING WITH ECENT BRIDEGE
+
+
