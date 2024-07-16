@@ -1,1 +1,21 @@
+AWS CODE PIPELINE
 
+1. SOURCE - Github or code-commit or bitbucket
+2. BUILD  - Codebuild or jenkins or Teamcity
+3. TEST   - Codebuild or AWS-Device-Farm
+4. DEPLOY - CodeDeploy or elasticbeanstalk or ecs or S3
+5. INVOKE - Lambda, Step-functions
+
+SEQUENCE: Source----> Build -------> Test-------> Deploy-----> Load test
+ Manual approval can be defined at any stage.
+
+CODEPIPELINE EVENTS VS WEBHOOK VS POLLING
+EVENTS: (Most effective)
+1. codecommit---(newcommit)------> eventbridge ----(trigger)----> codepipeline
+2. GITHUB ---(newcommit)------> codestar source connection--------(trigger)---->codepipeline
+
+WEBHOOK: (based on use cases)
+1. script----(http-webhook)-----> codepipeline
+
+POLLING: (Not much useful)
+1. GITHUB-------(regular-checks)-----------> codepipeline
