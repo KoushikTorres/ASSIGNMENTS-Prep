@@ -21,6 +21,14 @@ Now all the newly added files are pushed to codecommit repository
 -----------------------------------------------------------
 A D V A N C E D
 ----------------------------------------
-CODE COMMIT - MONITORING WITH ECENT BRIDEGE
+CODE-COMMIT - MONITOR WITH EVENT BRIDEGE
 
+How cross region replication of code commit is achieved 
+
+DEVELOPER ------> CODECOMMIT Repo(us-east-1) ------------> EVENT BRIDGE(east-1) -----> ECS (east-1) -----------> Repository(us-west-2)
+
+CODECOMMIT BRANCH SECURITY-------- > can be achieved by applying iam policy to users for specific branch by adding deny attribute.
+
+PULL REQUESTS APPROVAL: 
+specify the users who need approve and the list of users who approves
 
